@@ -1,0 +1,117 @@
+/* Color codes reference:
+   Background: Approximately #ff8c3c or similar bright orange.
+   Text: White (or near-white).
+   Divider: White (or near-white) with low opacity.
+*/
+
+.footer {
+    background: linear-gradient(to right, #F97316, #f99340);
+    color: #ffffff;
+    padding: 40px 5%; /* Adjust padding for top/bottom and sides */
+    font-family: Arial, sans-serif; /* Use a common, readable font */
+}
+
+/* Container for the three main sections */
+.footer-content-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px; /* Optional: limit width on very large screens */
+    margin: 0 auto;
+    padding-bottom: 40px; /* Space above the divider */
+}
+
+.footer-section {
+    flex: 1; /* Make all three sections take up roughly equal space */
+    padding: 0 15px;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    /* Styles for "Abhi Cleaning Services," "Quick Links," "Follow Us" */
+}
+
+/* Styling for the tagline in the first section */
+.company-tagline {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Quick Links Styling */
+.quick-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.quick-links li {
+    margin-bottom: 8px;
+}
+
+.quick-links a {
+    color: inherit; /* Use the white text color */
+    text-decoration: none;
+    font-size: 14px;
+    transition: text-decoration 0.3s;
+}
+
+.quick-links a:hover {
+    text-decoration: underline;
+}
+
+/* Follow Us (Social Icons) Styling */
+.social-icons a {
+    color: #ffffff;
+    font-size: 20px; /* Size of the icons */
+    margin-right: 15px; /* Space between icons */
+    transition: opacity 0.3s;
+}
+
+.social-icons a:hover {
+    opacity: 0.8;
+}
+
+/* The horizontal line divider */
+.footer-divider {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.6); /* Semi-transparent white line */
+    margin: 0 auto;
+    max-width: 1200px; /* Match the content width */
+}
+
+/* Copyright Bar Styling */
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+/* --- Responsive adjustments for smaller screens (e.g., mobile) --- */
+@media (max-width: 768px) {
+    .footer-content-container {
+        flex-direction: column; /* Stack sections vertically */
+        padding-bottom: 20px;
+    }
+
+    .footer-section {
+        padding: 15px 0;
+        text-align: center; /* Center content on mobile */
+    }
+
+    .social-icons {
+        text-align: center; /* Ensure social icons stay centered */
+    }
+
+    /* Adjust spacing for the Quick Links list */
+    .quick-links ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .quick-links li {
+        margin: 0 10px 8px; /* Add horizontal spacing between links */
+    }
+}

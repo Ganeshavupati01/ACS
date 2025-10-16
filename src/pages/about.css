@@ -1,0 +1,135 @@
+/* About Section */
+.about-section {
+  padding: 80px 20px;
+  background-color: #111827;
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Container */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Left Image */
+.about-image {
+  flex: 0 0 450px;
+  height: 450px;
+  overflow: hidden;
+  position: relative;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-top-left-radius: 70%;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  filter: blur(1.5px) brightness(0.95);
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+.about-image img:hover {
+  filter: blur(0) brightness(1);
+  transform: scale(1.05);
+}
+
+/* Right Text */
+.about-content {
+  flex: 1 1 500px;
+  max-width: 650px;
+}
+
+.about-content h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.about-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 18px;
+  color: #efe8e8;
+}
+
+/* Cards Section */
+.about-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+
+.about-cards .card {
+  background-color: #f5f5f5;
+  flex: 0 0 250px;
+  padding: 25px 20px;
+  text-align: center;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-cards .card img {
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+.about-cards .card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #1c1c1c;
+}
+
+.about-cards .card p {
+  font-size: 15px;
+  color: #555;
+}
+
+/* Card Hover Effect */
+.about-cards .card:hover {
+ transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .about-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-content p {
+    font-size: 16px;
+  }
+
+  .about-image {
+    width: 100%;
+    height: 350px;
+  }
+
+  .about-image img {
+    border-top-left-radius: 70%;
+  }
+
+  .about-cards {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+}

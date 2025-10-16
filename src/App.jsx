@@ -1,35 +1,94 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
+import { scroller } from "react-scroll";
+import Header from "./components/Header";
+import MetaTags from "./components/MetaTags";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Services from "./pages/services";
+import "./App.css";
+import Footer from "./components/Footer";
 
-function App() {
-  const [count, setCount] = useState(0)
+// Scroll to section on route change
+function ScrollToSection() {
+  const location = useLocation();
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+  useEffect(() => {
+    const section = location.pathname.replace("/", "") || "home";
+
+    // Give DOM a tiny delay to render sections before scrolling
+    setTimeout(() => {
+      scroller.scrollTo(section, {
+        smooth: true,
+        duration: 800,
+        offset: -70,
+      });
+    }, 50);
+  }, [location]);
+
+  return null;
 }
 
-export default App
+export default function App() {
+  return (
+    <HelmetProvider>
+      <Router>
+        <Header />
+        <ScrollToSection />
+
+        {/* All sections rendered together for scrolling */}
+        <Home />
+        <About />
+        <Services />
+        <Contact />
+
+        {/* Routes only for SEO/meta tags */}
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <MetaTags
+                title="Home | Cleaning Services"
+                description="Welcome to our professional cleaning services."
+                url="https://mycleaningcompany.com/"
+              />
+            }
+          />
+          <Route
+            path="/about"
+            element={
+              <MetaTags
+                title="About Us | Cleaning Services"
+                description="Learn more about our trusted cleaning company."
+                url="https://mycleaningcompany.com/about"
+              />
+            }
+          />
+          <Route
+            path="/services"
+            element={
+              <MetaTags
+                title="Services | Cleaning Experts"
+                description="Explore our professional cleaning services."
+                url="https://mycleaningcompany.com/services"
+              />
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <MetaTags
+                title="Contact | Cleaning Services"
+                description="Get in touch with our cleaning service team."
+                url="https://mycleaningcompany.com/contact"
+              />
+            }
+          />
+        </Routes>
+      <Footer />
+      </Router>
+    </HelmetProvider>
+  );
+}

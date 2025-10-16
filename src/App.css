@@ -1,42 +1,423 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  overflow-x: hidden; /* prevent horizontal scroll */
+}
+
+/* ... (Your existing global and body styles) ... */
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(to right, #F97316, #f99340);
+  display: flex;
+  /* changed to space-between to push logo and nav apart */
+  justify-content: center; 
+  align-items: center; /* Vertically align items */
+  padding: 15px 30px; /* Add horizontal padding */
+  z-index: 1000;
+  color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  width: 100%;
+  max-width: 1200px; /* Limit content width for better design */
+  display: flex;
+  justify-content: space-between; /* Space out logo and nav */
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  height: 60px; /* Adjust size as needed */
+  width: 150px;
 }
 
-@keyframes logo-spin {
+
+
+/* Update nav to remove centering from header, now centered via header-content */
+.header nav {
+  display: flex;
+  gap: 20px;
+}
+
+/* ... (Rest of your existing .header button styles) ... */
+.header button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+  position: relative; /* needed for underline */
+  transition: all 0.3s ease;
+  outline: none; /* remove outline on click */
+}
+
+
+
+/* Hover effect */
+.header button:hover,
+.header button:focus {
+  transform: scale(1.1); /* text grows visually without affecting header layout */
+}
+
+/* Underline effect */
+.header button::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  left: 0;
+  bottom: -5px; /* distance from text */
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.header button:hover::after,
+.header button:focus::after {
+  width: 100%; /* underline expands */
+}
+
+/* Remove border/outline on click */
+.header button:active {
+  outline: none;
+  border: none;
+  transform: scale(1.05); /* slight click animation */
+}
+
+/* ... (Rest of your existing App.css styles) ... */
+
+
+
+main {
+  margin-top: 70px;
+}
+
+.page {
+  width: 100vw; /* full width of viewport */
+   /* full height of viewport */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+}
+
+/* Optional: add padding for mobile screens */
+.page h1, .page p {
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* Different backgrounds */
+
+
+
+
+
+
+
+
+.home {
+  position: relative;
+  height: 100vh;
+background-color: #111827;  overflow: hidden;
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/src/assets/home2.jpg") center/cover no-repeat;
+  clip-path: path("M0,600 C550,600 750,400 1100,600 L2600,00 L0,0 Z");
+  filter: blur(3px); /* <--- blur strength (adjust as needed) */
+  transform: scale(1.05);
+  z-index: 1;
+}
+
+/* Position and layout */
+.home .overlay {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* push content down */
+  align-items: center;
+  color: white;
+  padding-bottom: 100px; /* space above buttons */
+}
+
+/* Text styling */
+.home .content {
+  margin-top: 320px;
+  text-align: center;
+  margin-bottom: 220px;
+}
+
+/* Button group */
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+/* Individual button */
+.btn {
+  text-decoration:#F97316;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: bold;
+  
+}
+
+/* Button colors */
+.call-btn {
+background: linear-gradient(to right, #F97316, #FB923C);
+  color: white;
+}
+
+
+
+.whatsapp-btn {
+background: linear-gradient(to right, #F97316, #FB923C);
+  color: white;
+}
+
+/* Section styles */
+.services {
+  background-color: #1F2937; /* Dark background */
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  color: #E5E7EB; /* Light text for dark mode */
+}
+
+.services h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Container for all cards */
+.services-container {
+  display: flex;
+  justify-content:space-between;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+/* Individual service cards */
+.service-card {
+  background-color: #111827; /* Dark card background */
+  border-radius: 12px;
+  padding: 20px;
+  width: 320px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.service-card img {
+  width: 100%;
+  height: 180px;       /* fixed height for all images */
+  object-fit: cover;   /* crop/fit image to fill the box */
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+
+.service-card h2 {
+  color: #FFFFFF;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  color: #6B7280; /* Muted text */
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+/* Button */
+.service-card button {
+  background: linear-gradient(to right, #F97316, #FB923C);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+ .moreb button{
+  background: linear-gradient(to right, #F97316, #FB923C);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 60px;
+  transition: background 0.3s ease;
+ }
+
+.service-card button:hover {
+  background: linear-gradient(to right, #FB923C, #F97316);
+}
+
+/* Hover animation */
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== Modal Overlay (Blur Background) ===== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(17, 17, 17, 0.6);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+/* ===== Modal Card ===== */
+.modal-card {
+  background-color: #1F2937;
+  color: #E5E7EB;
+  display: flex;
+  width: 85%;
+  max-width: 900px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+  animation: scaleIn 0.3s ease;
+}
+
+/* Left side (Image) */
+.modal-left img {
+  width: 100%;
+  height: 100%;
+  max-width: 400px;
+  object-fit: cover;
+}
+
+/* Right side (Content) */
+.modal-right {
+  padding: 30px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-right h2 {
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* Tabs */
+.tab-buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.tab-buttons button {
+  background: none;
+  border: 2px solid #F97316;
+  color: #F97316;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-buttons button.active,
+.tab-buttons button:hover {
+  background: linear-gradient(to right, #F97316, #FB923C);
+  color: white;
+}
+
+/* Content area */
+.tab-content {
+  flex: 1;
+  overflow-y: auto;
+  max-height: 400px;
+}
+
+.details-text {
+  line-height: 1.6;
+  color: #D1D5DB;
+}
+
+.faq-list {
+  list-style: none;
+  padding: 0;
+}
+
+.faq-list li {
+  margin-bottom: 15px;
+}
+
+.faq-list strong {
+  color: #F97316;
+}
+
+.faq-list p {
+  color: #D1D5DB;
+  margin-top: 4px;
+}
+
+/* Animation */
+@keyframes scaleIn {
   from {
-    transform: rotate(0deg);
+    transform: scale(0.9);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    transform: scale(1);
+    opacity: 1;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+/* Responsive */
+@media (max-width: 768px) {
+  .modal-card {
+    flex-direction: column;
+    width: 90%;
+  }
+  .modal-left img {
+    max-width: 100%;
+    height: 250px;
   }
 }
 
-.card {
-  padding: 2em;
+
+
+/* Responsive */
+@media (max-width: 600px) {
+  .cta-buttons {
+    flex-direction: column;
+  }
 }
 
-.read-the-docs {
-  color: #888;
-}
+
