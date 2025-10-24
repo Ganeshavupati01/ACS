@@ -1,135 +1,126 @@
-/* About Section */
+/* ======= About Section ======= */
 .about-section {
+  background-color: #ffffff;
+  color: #000;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   padding: 80px 20px;
-  background-color: #111827;
-  color: white;
-  font-family: 'Arial', sans-serif;
 }
 
-/* Container */
-.about-container {
+/* ======= Header Image + Text Side by Side ======= */
+.about-header {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 60px;
   flex-wrap: wrap;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto 80px;
+  text-align: left;
 }
 
 /* Left Image */
-.about-image {
-  flex: 0 0 450px;
-  height: 450px;
-  overflow: hidden;
-  position: relative;
-}
-
-.about-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  border-top-left-radius: 70%;
-  border-top-right-radius: 0;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  filter: blur(1.5px) brightness(0.95);
-  transform: scale(1.02);
-  transition: all 0.3s ease;
-}
-.about-image img:hover {
-  filter: blur(0) brightness(1);
-  transform: scale(1.05);
-}
-
-/* Right Text */
-.about-content {
-  flex: 1 1 500px;
-  max-width: 650px;
-}
-
-.about-content h2 {
-  font-size: 2rem;
-  margin-bottom: 25px;
-  color: white;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.about-content p {
-  font-size: 18px;
-  line-height: 1.8;
-  margin-bottom: 18px;
-  color: #efe8e8;
-}
-
-/* Cards Section */
-.about-cards {
+.about-header-image {
+  flex: 0 0 420px;
   display: flex;
   justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  margin-top: 60px;
+  align-items: center;
 }
 
-.about-cards .card {
-  background-color: #f5f5f5;
-  flex: 0 0 250px;
+.about-header-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25); /* ✅ Add circular shadow */
+  transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about-header-image img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.05);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3); /* stronger shadow on hover */
+}
+
+
+/* Right Content */
+.about-header-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.about-header-content h2 {
+  font-size: 2rem;
+  color: #1d2f54;
+  margin-bottom: 20px;
+}
+
+.about-header-content p {
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 18px;
+  color: #333;
+}
+
+/* ======= Feature Cards ======= */
+.about-right {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 35px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: #f3f4f6;
   padding: 25px 20px;
   text-align: center;
-  border-radius: 15px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
-.about-cards .card img {
-  width: 60px;
+.feature-card:hover {
+  transform: scale(1.07);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+  font-size: 40px;
+  color: #1d2f54;
   margin-bottom: 15px;
 }
 
-.about-cards .card h3 {
-  font-size: 1.2rem;
+.feature-card h3 {
+  font-size: 1.1rem;
+  color: #000;
   margin-bottom: 10px;
-  color: #1c1c1c;
 }
 
-.about-cards .card p {
+.feature-card p {
   font-size: 15px;
-  color: #555;
+  color: #444;
+  line-height: 1.5;
 }
 
-/* Card Hover Effect */
-.about-cards .card:hover {
- transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .about-container {
+/* ======= Responsive Design ======= */
+@media (max-width: 900px) {
+  .about-header {
     flex-direction: column;
-    gap: 30px;
+    text-align: center;
   }
 
-  .about-content h2 {
-    font-size: 1.8rem;
+  .about-header-content {
+    text-align: center;
   }
 
-  .about-content p {
-    font-size: 16px;
-  }
-
-  .about-image {
+  .about-header-image {
     width: 100%;
-    height: 350px;
+    height: 300px;
   }
+}
 
-  .about-image img {
-    border-top-left-radius: 70%;
-  }
-
-  .about-cards {
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
+@media (max-width: 600px) {
+  .about-right {
+    grid-template-columns: 1fr;
   }
 }

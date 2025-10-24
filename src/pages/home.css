@@ -1,0 +1,115 @@
+/* Home Section */
+.home-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+/* Background Image */
+.home-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(2px); /* Slight blur */
+  transform: scale(1.05);
+  z-index: 0;
+}
+
+/* Overlay */
+.home-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(2px);
+  z-index: 1;
+}
+
+/* Text Content */
+.home-content {
+  position: relative;
+  z-index: 2; /* Above overlay */
+  max-width: 800px;
+}
+
+.home-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.home-content p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Buttons Container */
+.home-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Glassy Buttons */
+.home-buttons a {
+  padding: 12px 25px;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+/* Hover Effect for Buttons */
+.home-buttons a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.25);
+}
+
+/* Call Button - Green */
+.call-btn {
+  background: linear-gradient(to right, #1D2F54, #4d5c7b);
+}
+
+/* WhatsApp Button - Blue */
+.whatsapp-btn {
+  background: linear-gradient(to right, #1D2F54, #4d5c7b);
+}
+
+/* Bottom Wave */
+.home-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  z-index: 2;
+}
+
+/* Background Video */
+.home-bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills the section */
+  filter: brightness(0.9) blur(2px); /* same subtle blur + dim */
+  z-index: 0;
+}

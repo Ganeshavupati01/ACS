@@ -1,8 +1,6 @@
 import React from "react";
-import aboutImg from "../assets/about.jpg"; // Your main image
-import card1 from "../assets/clock.jpg";   // 24/7 icon
-import card2 from "../assets/highquality.jpg"; // High quality icon
-import card3 from "../assets/bestprice.jpg";   // Best price icon
+import aboutTop from "../assets/about.jpg";
+import { FaClock, FaCheckCircle, FaDollarSign, FaHandsHelping } from "react-icons/fa";
 import MetaTags from "../components/MetaTags";
 import "./about.css";
 
@@ -12,69 +10,62 @@ const About = () => {
       {/* SEO Meta Tags */}
       <MetaTags
         title="About Us | Abhi Cleaning Services UAE"
-        description="Welcome to Abhi Cleaning Services, the trusted sewage, gutter, pipeline, drain-line, and water tank cleaning company in the UAE. Professional, hygienic, and affordable cleaning services across Dubai, Abu Dhabi, Sharjah, and Ajman."
+        description="Abhi Cleaning Services offers professional sewage, gutter, pipeline, and water tank cleaning with 24/7 availability and affordable pricing across the UAE."
         url="https://mycleaningcompany.com/about"
       />
 
       {/* About Section */}
       <section id="about" className="about-section">
-        <div className="about-container">
-          {/* Left Image */}
-          <div className="about-image">
-            <img src={aboutImg} alt="About Abhi Cleaning Services" />
+        {/* Header Section: Image + Text Side by Side */}
+        <div className="about-header">
+          <div className="about-header-image">
+            <img src={aboutTop} alt="About Abhi Cleaning Services" />
           </div>
 
-          {/* Right Text */}
-          <div className="about-content">
+          <div className="about-header-content">
             <h2>
-               <strong>About Abhi Cleaning Services</strong>
+              <strong>About Abhi Cleaning Services</strong>
             </h2>
             <p>
-              Welcome to <a href="/about"><strong>Abhi Cleaning Services</strong></a>, the trusted company for 
-              <a href="/about"><strong> sewage cleaning</strong></a>, 
-              <a href="/about"><strong> gutter cleaning</strong></a>, 
-              <a href="/about"><strong> pipeline cleaning</strong></a>, 
-              <a href="/about"><strong> drain-line cleaning</strong></a>, and 
-              <a href="/about"><strong> water tank cleaning</strong></a> in the UAE. 
-              We provide professional, hygienic, and affordable services across 
-              <a href="/about"><strong> Dubai</strong></a>, 
-              <a href="/about"><strong> Abu Dhabi</strong></a>, 
-              <a href="/about"><strong> Sharjah</strong></a>, and 
-              <a href="/about"><strong> Ajman</strong></a>.
+              Welcome to <strong>Abhi Cleaning Services</strong>, your trusted partner
+              for sewage, gutter, pipeline, and water tank cleaning across the UAE.
+              Our team is committed to providing hygienic and affordable solutions
+              using modern, eco-friendly cleaning technology.
             </p>
             <p>
-              Our <a href="/about"><strong>experienced cleaning team</strong></a> ensures every job is completed 
-              on time with precision, care, and top hygiene standards. We use advanced 
-              <a href="/about"><strong> high-pressure jet machines</strong></a> and 
-              <a href="/about"><strong> eco-friendly cleaning techniques</strong></a> to handle blocked drains, clogged gutters, sewage overflows, and water tank cleaning efficiently.
+              We take pride in maintaining top hygiene standards while ensuring
+              every project is handled with care and precision. Whether you need
+              routine maintenance or emergency support, our experts are always ready
+              to assist.
             </p>
             <p>
-              Available <a href="/about"><strong>24/7 across the UAE</strong></a>, 
-              <a href="/about"><strong> Abhi Cleaning Services</strong></a> is always ready to respond to 
-              sewage or drainage emergencies. Whether it’s a midnight blockage or routine water tank cleaning, 
-              we guarantee quick, safe, and hygienic service that keeps your surroundings 
-              clean, odor-free, and healthy all year round.
+              Operating 24/7 across <strong>Dubai, Abu Dhabi, Sharjah, and Ajman</strong>,
+              we guarantee fast response times, professional service, and long-lasting results.
             </p>
           </div>
         </div>
 
-        {/* Cards Section */}
-        <div className="about-cards">
-          <div className="card">
-            <img src={card1} alt="24/7 Service" />
-            <h3>24/7 Service</h3>
-            <p>We are available anytime for emergency cleaning services across the UAE.</p>
+        {/* Right Side - Feature Cards */}
+        <div className="about-right">
+          <div className="feature-card">
+            <FaClock className="feature-icon" />
+            <h3>24/7 Availability</h3>
+            <p>Our team is ready around the clock for any cleaning emergencies.</p>
           </div>
-          <div className="card">
-            <img src={card2} alt="High Quality" />
-            <h3>High Quality Service</h3>
-            <p>Our team ensures hygienic and professional cleaning every time.</p>
+
+          <div className="feature-card">
+            <FaCheckCircle className="feature-icon" />
+            <h3>High Quality Cleaning</h3>
+            <p>We deliver spotless and hygienic results with every service.</p>
           </div>
-          <div className="card">
-            <img src={card3} alt="Best Price" />
-            <h3>Best Price Services</h3>
-            <p>Affordable cleaning solutions without compromising quality.</p>
+
+          <div className="feature-card">
+            <FaDollarSign className="feature-icon" />
+            <h3>Affordable Pricing</h3>
+            <p>Competitive prices that ensure great value for your money.</p>
           </div>
+
+          
         </div>
       </section>
     </>

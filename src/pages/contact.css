@@ -1,6 +1,6 @@
 /* Background and Section Layout */
 .contact-section {
- background: #111827;
+ background: #ffffff;
   padding: 100px 40px; /* perfect padding */
   display: flex;
   justify-content: center;
@@ -33,12 +33,13 @@
   gap: 40px;
   max-width: 1200px;
   width: 100%;
+  
 }
 
 /* Both Left & Right Boxes */
 .contact-box {
   flex: 1 1 48%;
-  background: rgba(255, 255, 255, 0.08);
+  background: #f3f4f6;
   padding: 35px;
   border-radius: 16px;
   backdrop-filter: blur(3px);
@@ -50,7 +51,7 @@
 /* LEFT SIDE */
 .contact-left h2,
 .contact-right h2 {
-  color: #ff9800;
+  color: #263a63;
   font-size: 1.8rem;
   margin-bottom: 25px;
   text-transform: uppercase;
@@ -70,7 +71,7 @@
 }
 
 .icon {
-  color: #ff9800;
+  color: #263a63;
   font-size: 22px;
   margin-top: 4px;
 }
@@ -78,18 +79,18 @@
 .info-item p {
   margin: 0;
   font-weight: 600;
-  color: #fff;
+  color: #263a63;
 }
 
 .info-item a,
 .info-item span {
-  color: #ddd;
+  color: #5f6e8d;
   font-size: 15px;
   text-decoration: none;
 }
 
 .info-item a:hover {
-  color: #ff9800;
+  color: #263a63;
 }
 
 /* Map */
@@ -110,18 +111,23 @@
 .contact-right textarea {
   width: 100%;
   padding: 12px 15px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.15);
-  color: #fff;
+    background: rgb(255, 255, 255);
+
+  border: none; /* remove all borders */
+  
+  
+  color: #000;
   font-size: 15px;
   outline: none;
-  transition: 0.3s ease;
+  transition: border-color 0.3s ease;
 }
+
+/* Optional: add hover/focus effect */
+
 
 .contact-right input::placeholder,
 .contact-right textarea::placeholder {
-  color: rgba(255, 255, 255, 0.8);
+  color: #5f6e8d;
 }
 
 .contact-right input:focus,
@@ -133,8 +139,8 @@
 /* Button */
 .contact-right button {
   align-self: flex-start;
-  background: linear-gradient(to right, #F97316, #f99340);
-  color: #111;
+  background: linear-gradient(to right, #1D2F54, #4d5c7b);
+  color: #ffffff;
   font-weight: 800;
   padding: 14px 36px;
   border: none;
@@ -142,7 +148,7 @@
   cursor: pointer;
   font-size: 1rem;
   transition: all 0.3s ease;
-  box-shadow: 0px 10px 25px rgba(255, 152, 0, 0.5);
+ 
   position: relative;
   margin-top: 10px;
 }
