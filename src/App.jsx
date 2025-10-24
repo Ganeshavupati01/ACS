@@ -2,14 +2,16 @@ import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { scroller } from "react-scroll";
+import Blogs from "./pages/Blogs";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import MetaTags from "./components/MetaTags";
+import Testimonials from "./pages/Testimonials";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Contact from "./pages/Contact";
 import Services from "./pages/services";
+import Contact from "./pages/Contact";
 import "./App.css";
-import Footer from "./components/Footer";
 
 // Scroll to section on route change
 function ScrollToSection() {
@@ -18,7 +20,6 @@ function ScrollToSection() {
   useEffect(() => {
     const section = location.pathname.replace("/", "") || "home";
 
-    // Give DOM a tiny delay to render sections before scrolling
     setTimeout(() => {
       scroller.scrollTo(section, {
         smooth: true,
@@ -38,13 +39,15 @@ export default function App() {
         <Header />
         <ScrollToSection />
 
-        {/* All sections rendered together for scrolling */}
+        {/* Render all sections for smooth scroll */}
         <Home />
         <About />
         <Services />
+        <Testimonials />
+        <Blogs />
         <Contact />
 
-        {/* Routes only for SEO/meta tags */}
+        {/* SEO/meta routes */}
         <Routes>
           <Route
             path="/"
@@ -67,13 +70,16 @@ export default function App() {
             }
           />
           <Route
-            path="/services"
+            path="/services/:serviceName"
             element={
-              <MetaTags
-                title="Services | Cleaning Experts"
-                description="Explore our professional cleaning services."
-                url="https://mycleaningcompany.com/services"
-              />
+              <>
+                <MetaTags
+                  title="Service Details | Cleaning Experts"
+                  description="Learn more about our specific cleaning services."
+                  url="https://mycleaningcompany.com/services/:serviceName"
+                />
+                <Services />
+              </>
             }
           />
           <Route
@@ -87,7 +93,8 @@ export default function App() {
             }
           />
         </Routes>
-      <Footer />
+
+        <Footer />
       </Router>
     </HelmetProvider>
   );

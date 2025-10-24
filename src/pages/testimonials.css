@@ -1,0 +1,96 @@
+/* Testimonials Section */
+.testimonials-section {
+  background: #ffffff;
+  padding: 80px 20px;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+}
+
+.testimonials-title {
+  font-size: 2.2rem;
+  color: #0d0d0d;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+/* Container */
+.testimonials-container {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  flex-wrap: wrap;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+  background:#f3f4f6;
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(1, 1, 1, 0.1);
+  padding: 25px 20px;
+  width: 320px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: scale(1.07);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Profile Section */
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.profile-circle {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(to right, #1D2F54, #4d5c7b);
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.profile-info h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #1D2F54;
+}
+
+/* Stars */
+.stars {
+  color: #facc15;
+  display: flex;
+  gap: 3px;
+}
+
+/* Service Name */
+.service-name {
+  color: #425477;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* Review Text */
+.review-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .testimonial-card {
+    width: 100%;
+    max-width: 400px;
+  }
+}
