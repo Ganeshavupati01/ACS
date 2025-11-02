@@ -24,8 +24,9 @@ export default function Header() {
         
         <nav>
           <button onClick={() => handleScroll("home", "/")}>Home</button>
-          <button onClick={() => handleScroll("about", "/about")}>About</button>
+          <button onClick={() => handleScroll("about-us", "/about-us")}>About Us</button>
           <button onClick={() => handleScroll("services", "/services")}>Services</button>
+          <button onClick={() => handleScroll("blogs", "/blogs")}>Blogs</button>
           <button onClick={() => handleScroll("contact", "/contact")}>Contact</button>
         </nav>
       </div>

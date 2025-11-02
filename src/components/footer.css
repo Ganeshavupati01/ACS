@@ -1,117 +1,203 @@
-/* Color codes reference:
-   Background: Approximately #ff8c3c or similar bright orange.
-   Text: White (or near-white).
-   Divider: White (or near-white) with low opacity.
-*/
-
 .footer {
-  background: linear-gradient(to right, #1D2F54, #4d5c7b);
-    color: #ffffff;
-    padding: 40px 5%; /* Adjust padding for top/bottom and sides */
-    font-family: Arial, sans-serif; /* Use a common, readable font */
+  background-color: #f97316; /* 🔶 Orange background */
+  color: #ffffff;
+  padding: 50px 30px 20px;
+  font-family: "Poppins", sans-serif;
 }
 
-/* Container for the three main sections */
+/* ✅ Container */
 .footer-content-container {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px; /* Optional: limit width on very large screens */
-    margin: 0 auto;
-    padding-bottom: 40px; /* Space above the divider */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
 }
 
+/* ✅ Footer Section */
 .footer-section {
-    flex: 1; /* Make all three sections take up roughly equal space */
-    padding: 0 15px;
+  flex: 1 1 300px;
+  min-width: 260px;
 }
 
+/* ✅ Section Titles */
 .section-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    /* Styles for "Abhi Cleaning Services," "Quick Links," "Follow Us" */
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0c1a25; /* 🔷 Blue heading highlight */
+  margin-bottom: 8px;
 }
 
-/* Styling for the tagline in the first section */
+/* ✅ Company Tagline */
 .company-tagline {
-    font-size: 14px;
-    line-height: 1.5;
+  color: #fff8e7;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
 }
 
-/* Quick Links Styling */
+/* ✅ Quick Links */
 .quick-links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .quick-links li {
-    margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .quick-links a {
-    color: inherit; /* Use the white text color */
-    text-decoration: none;
-    font-size: 14px;
-    transition: text-decoration 0.3s;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .quick-links a:hover {
-    text-decoration: underline;
+  color: #0c1a25; /* 🔷 Blue hover */
 }
 
-/* Follow Us (Social Icons) Styling */
+/* ✅ Social Media */
+.social-icons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
 .social-icons a {
-    color: #ffffff;
-    font-size: 20px; /* Size of the icons */
-    margin-right: 15px; /* Space between icons */
-    transition: opacity 0.3s;
+  color: #ffffff;
+  font-size: 1.15rem;
+  transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-    opacity: 0.8;
+  color: #0c1a25; /* 🔷 Blue hover */
 }
 
-/* The horizontal line divider */
+/* ✅ WhatsApp & Call */
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.93rem;
+  transition: color 0.3s ease;
+}
+
+.contact-link i {
+  color: #0c1a25; /* 🔷 Blue icons */
+  font-size: 1.1rem;
+}
+
+.contact-link:hover {
+  color: #0c1a25;
+}
+
+/* ✅ Divider & Copyright */
 .footer-divider {
-    border: none;
-    border-top: 1px solid rgba(255, 255, 255, 0.6); /* Semi-transparent white line */
-    margin: 0 auto;
-    max-width: 1200px; /* Match the content width */
+  border: none;
+  border-top: 1px solid #fff3e0;
+  margin: 20px 0 8px;
 }
 
-/* Copyright Bar Styling */
 .copyright {
-    text-align: center;
-    padding-top: 20px;
-    font-size: 12px;
-    opacity: 0.8;
+  text-align: center;
+  font-size: 0.83rem;
+  color: #ffe8cc;
+  margin-top: 4px;
+  letter-spacing: 0.3px;
 }
 
-/* --- Responsive adjustments for smaller screens (e.g., mobile) --- */
-@media (max-width: 768px) {
-    .footer-content-container {
-        flex-direction: column; /* Stack sections vertically */
-        padding-bottom: 20px;
-    }
+/* ✅ Mobile & Tablet View (2-column grid for Quick Links + Follow Us) */
+@media (max-width: 1024px) {
+  .footer-content-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+    gap: 15px 20px;
+    text-align: center;
+  }
 
-    .footer-section {
-        padding: 15px 0;
-        text-align: center; /* Center content on mobile */
-    }
+  .footer-section {
+    width: 100%;
+  }
 
-    .social-icons {
-        text-align: center; /* Ensure social icons stay centered */
-    }
+  /* First section spans full width */
+  .footer-section:first-child {
+    grid-column: span 2;
+  }
 
-    /* Adjust spacing for the Quick Links list */
-    .quick-links ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+  .section-title {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+    color: #0c1a25;
+  }
 
-    .quick-links li {
-        margin: 0 10px 8px; /* Add horizontal spacing between links */
-    }
+  .company-tagline {
+    font-size: 0.9rem;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .contact-methods {
+    align-items: center;
+  }
+
+  .contact-link {
+    justify-content: center;
+  }
+
+  .footer {
+    padding: 35px 20px 15px;
+  }
+}
+
+/* ✅ Small Mobile (single-column compact) */
+@media (max-width: 600px) {
+  .footer-content-container {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .footer-section:first-child {
+    grid-column: auto;
+  }
+
+  .section-title {
+    font-size: 1.05rem;
+    color: #0c1a25;
+  }
+
+  .footer {
+    padding: 28px 18px 10px;
+  }
+}
+
+/* ✅ Desktop (3 columns side-by-side) */
+@media (min-width: 1025px) {
+  .footer-content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .footer-section {
+    flex: 1 1 30%;
+    max-width: 360px;
+  }
+
+  .section-title {
+    margin-bottom: 8px;
+    color: #0c1a25;
+  }
 }

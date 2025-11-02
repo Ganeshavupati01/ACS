@@ -1,71 +1,80 @@
 import React from "react";
-import aboutTop from "../assets/about.jpg";
-import { FaClock, FaCheckCircle, FaDollarSign, FaHandsHelping } from "react-icons/fa";
+import aboutImg from "../assets/about.jpg";
+import card1 from "../assets/clock.jpg";
+import card2 from "../assets/highquality.jpg";
+import card3 from "../assets/bestprice.jpg";
 import MetaTags from "../components/MetaTags";
 import "./about.css";
 
 const About = () => {
   return (
     <>
-      {/* SEO Meta Tags */}
+      {/* ✅ SEO Meta Tags */}
       <MetaTags
-        title="About Us | Abhi Cleaning Services UAE"
-        description="Abhi Cleaning Services offers professional sewage, gutter, pipeline, and water tank cleaning with 24/7 availability and affordable pricing across the UAE."
-        url="https://mycleaningcompany.com/about"
+        title="About Us | Abhi Drain Line Cleaning Services UAE"
+        description="Abhi Drain Line Cleaning Services UAE provides expert drain line, sewage, gutter, and water tank cleaning in Dubai, Abu Dhabi, Sharjah, and Ajman. 24/7 availability, eco-friendly methods, and affordable rates."
+        keywords="Abhi Drain Line Cleaning Services, drain cleaning UAE, sewage cleaning Dubai, water tank cleaning Abu Dhabi, gutter cleaning Sharjah, pipeline cleaning UAE"
+        url="https://abhidrainlinecleaning.com/about-us"
       />
 
-      {/* About Section */}
-      <section id="about" className="about-section">
-        {/* Header Section: Image + Text Side by Side */}
+      {/* ✅ About Section */}
+      <section id="about-us" className="about-section">
         <div className="about-header">
+          {/* Left Image */}
           <div className="about-header-image">
-            <img src={aboutTop} alt="About Abhi Cleaning Services" />
+            <img
+              src={aboutImg}
+              alt="Professional drain line and sewage cleaning service in UAE"
+              loading="lazy"
+            />
           </div>
 
+          {/* Right Text */}
           <div className="about-header-content">
-            <h2>
-              <strong>About Abhi Cleaning Services</strong>
-            </h2>
+            <h1>About Us</h1>
+            <h2 className="company-subtitle">Abhi Drain Line Cleaning Services</h2>
+
             <p>
-              Welcome to <strong>Abhi Cleaning Services</strong>, your trusted partner
-              for sewage, gutter, pipeline, and water tank cleaning across the UAE.
-              Our team is committed to providing hygienic and affordable solutions
-              using modern, eco-friendly cleaning technology.
+              Welcome to <strong>Abhi Drain Line Cleaning Services</strong>, your trusted partner for{" "}
+              <strong>drain line cleaning</strong>, <strong>sewage cleaning</strong>,{" "}
+              <strong>gutter cleaning</strong>, and <strong>water tank cleaning</strong> across the UAE.
             </p>
+
             <p>
-              We take pride in maintaining top hygiene standards while ensuring
-              every project is handled with care and precision. Whether you need
-              routine maintenance or emergency support, our experts are always ready
-              to assist.
+              Our <strong>trained professionals</strong> use advanced{" "}
+              <strong>high-pressure jetting machines</strong> and{" "}
+              <strong>eco-friendly cleaning techniques</strong> to clear blockages, prevent overflows,
+              and maintain hygienic drainage systems for residential, commercial, and industrial clients.
             </p>
+
             <p>
-              Operating 24/7 across <strong>Dubai, Abu Dhabi, Sharjah, and Ajman</strong>,
-              we guarantee fast response times, professional service, and long-lasting results.
+              Available <strong>24/7</strong> in <strong>Dubai</strong>,{" "}
+              <strong>Abu Dhabi</strong>, <strong>Sharjah</strong>, and{" "}
+              <strong>Ajman</strong> — we ensure fast, affordable, and high-quality cleaning
+              services that keep your surroundings clean, safe, and odor-free.
             </p>
           </div>
         </div>
 
-        {/* Right Side - Feature Cards */}
-        <div className="about-right">
+        {/* ✅ Feature Cards */}
+        <div className="about-cards">
           <div className="feature-card">
-            <FaClock className="feature-icon" />
-            <h3>24/7 Availability</h3>
-            <p>Our team is ready around the clock for any cleaning emergencies.</p>
+            <img src={card1} alt="24/7 Drain Line Cleaning Service UAE" loading="lazy" />
+            <h3>24/7 Service</h3>
+            <p>Available anytime for emergency drain or sewage cleaning across the UAE.</p>
           </div>
 
           <div className="feature-card">
-            <FaCheckCircle className="feature-icon" />
-            <h3>High Quality Cleaning</h3>
-            <p>We deliver spotless and hygienic results with every service.</p>
+            <img src={card2} alt="High Quality Drain Line Cleaning UAE" loading="lazy" />
+            <h3>High Quality</h3>
+            <p>We deliver professional cleaning using modern tools and eco-safe solutions.</p>
           </div>
 
           <div className="feature-card">
-            <FaDollarSign className="feature-icon" />
-            <h3>Affordable Pricing</h3>
-            <p>Competitive prices that ensure great value for your money.</p>
+            <img src={card3} alt="Affordable Drain Line Cleaning UAE" loading="lazy" />
+            <h3>Best Price</h3>
+            <p>Affordable, transparent pricing with complete customer satisfaction guaranteed.</p>
           </div>
-
-          
         </div>
       </section>
     </>

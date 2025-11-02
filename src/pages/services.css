@@ -1,78 +1,99 @@
-/* ===== Services Section ===== */
+/* ========================
+   SERVICES SECTION
+======================== */
 .services {
-  background-color:#f3f4f6;
-  padding: 40px 20px;
+  background-color: #faf9f9; /* dark grey */
+  padding: 60px 20px;
   text-align: center;
   font-family: 'Arial', sans-serif;
-  color: #000000;
+  color: #E5E7EB;
 }
 
 .services h2 {
   font-size: 2rem;
-  margin-bottom: 25px;
-  color: rgb(0, 0, 0);
+  margin-bottom: 40px;
+  color: rgb(3, 0, 0);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Container for all cards */
+/* Cards container */
 .services-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 30px;
 }
 
 /* Individual service cards */
-
+.service-card {
+  background-color: #f9f8fa;
+  border-radius: 12px;
+  width: 320px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+}
 
 .service-card img {
   width: 100%;
-  height: 210px;
+  height: 200px;
   object-fit: cover;
-  margin-bottom: 10px;
+  border-radius: 12px 12px 0 0;
 }
 
 .service-card h2 {
-  color: #000000;
+  color: #020000;
   font-size: 1.2rem;
+  margin: 15px 0 10px;
+}
+
+.service-card p {
+  color: #000000;
+  font-size: 0.9rem;
   margin-bottom: 15px;
 }
 
-/* Button */
 .service-card button {
-  background: linear-gradient(to right, #1D2F54, #4d5c7b);
+  background: linear-gradient(to right, #F97316, #FB923C);
   color: white;
   border: none;
   padding: 8px 16px;
   border-radius: 6px;
   cursor: pointer;
+  margin-bottom: 15px;
   transition: background 0.3s ease;
 }
 
 .service-card button:hover {
-  background: linear-gradient(to left, #1D2F54, #4d5c7b);
-}
-
-.service-card {
-  background: white;
-  border-radius: 12px;
-  padding-bottom: 20px;
-  width: 320px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  text-align: center;
-  cursor: pointer;
+  background: linear-gradient(to right, #FB923C, #F97316);
 }
 
 .service-card:hover {
-  transform: scale(1.05); /* increased from 1.05 → 1.12 */
-  box-shadow: 0 20px 35px rgba(28, 26, 26, 0.3);
-  z-index: 10; /* keeps it above others */
+  transform: scale(1.05);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
 }
 
+/* MORE BUTTON */
+.moreb button {
+  background: linear-gradient(to right, #F97316, #FB923C);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 40px;
+  transition: background 0.3s ease;
+}
 
+.moreb button:hover {
+  background: linear-gradient(to right, #FB923C, #F97316);
+}
 
-/* ===== Modal Overlay (Blur Background) ===== */
+/* ========================
+   MODAL STYLING
+======================== */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -87,40 +108,19 @@
   z-index: 2000;
 }
 
-/* ===== Modal Card ===== */
 .modal-card {
-  position: relative;
-  background: #f3f4f6;
-  color: #000000;
+  background-color: #1F2937;
+  color: #E5E7EB;
   display: flex;
   width: 85%;
   max-width: 900px;
-  height: 500px;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
   animation: scaleIn 0.3s ease;
+  flex-wrap: wrap;
 }
 
-/* ===== Modal Close Button (X) ===== */
-.modal-close {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  background: none;
-  border: none;
-  font-size: 28px;
-  color: #000000;
-  cursor: pointer;
-  font-weight: bold;
-  z-index: 2100;
-}
-
-.modal-close:hover {
-  color: #fb3531;
-}
-
-/* Left side (Image) */
 .modal-left img {
   width: 100%;
   height: 100%;
@@ -128,17 +128,15 @@
   object-fit: cover;
 }
 
-/* Right side (Content) */
 .modal-right {
   padding: 30px;
   flex: 1;
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
 }
 
 .modal-right h2 {
-  color: #1D2F54;
+  color: white;
   margin-bottom: 15px;
 }
 
@@ -150,10 +148,9 @@
 }
 
 .tab-buttons button {
-  
-  
-  border: 1px solid #1D2F54;
-  color: #000000;
+  background: none;
+  border: 2px solid #F97316;
+  color: #F97316;
   padding: 6px 14px;
   border-radius: 8px;
   cursor: pointer;
@@ -162,12 +159,11 @@
 
 .tab-buttons button.active,
 .tab-buttons button:hover {
-    background: linear-gradient(to right, #1D2F54, #4d5c7b);
+  background: linear-gradient(to right, #F97316, #FB923C);
   color: white;
-  border: none;
 }
 
-/* Content area */
+/* Tab content */
 .tab-content {
   flex: 1;
   overflow-y: auto;
@@ -176,7 +172,7 @@
 
 .details-text {
   line-height: 1.6;
-  color: #3f4f6f;
+  color: #D1D5DB;
 }
 
 .faq-list {
@@ -189,93 +185,10 @@
 }
 
 .faq-list strong {
-  color: #1D2F54;
+  color: #F97316;
 }
 
 .faq-list p {
-  color: #3f4f6f;
+  color: #D1D5DB;
   margin-top: 4px;
-}
-
-/* === Promises Section === */
-.promises-section {
-  text-align: center;
-  margin-top: 80px;
-  padding: 60px 20px;
-  background: #f3f4f6;
-  border-radius: 16px;
-}
-
-.promises-section h2 {
-  color: #000000;
-  font-size: 2rem;
-  margin-bottom: 40px;
-}
-
-.promises-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
-}
-
-.promise-card {
-  background: linear-gradient(to right, #1D2F54, #4d5c7b);
-  color: #b9bfcb;
-  border-radius: 12px;
-  padding: 25px;
-  width: 270px;
-  transition: transform 0.4s ease, box-shadow 0.3s ease;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-}
-
-.promise-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
-}
-
-.promise-icon {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-  color:  #ffffff;
-
-}
-
-/* === Animations === */
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeIn 0.8s ease forwards;
-}
-
-@keyframes scaleIn {
-  from {
-    transform: scale(0.9);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-/* === Responsive === */
-@media (max-width: 768px) {
-  .modal-card {
-    flex-direction: column;
-    width: 90%;
-    height: auto;
-  }
-
-  .modal-left img {
-    max-width: 100%;
-    height: 250px;
-  }
 }
