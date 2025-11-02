@@ -1,28 +1,43 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { scroller } from "react-scroll";
 
 export default function Header() {
   const navigate = useNavigate();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleScroll = (section, path) => {
-    navigate(path); // change URL
+    navigate(path);
     scroller.scrollTo(section, {
       smooth: true,
       duration: 800,
       offset: -70,
     });
+    setIsMenuOpen(false); // Close menu after navigation
+  };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
     <header className="header">
       <div className="header-content">
-        {/* Logo goes here - replace the src with your actual logo path */}
+        <button 
+          className="hamburger" 
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
+          <span className={isMenuOpen ? "open" : ""}></span>
+          <span className={isMenuOpen ? "open" : ""}></span>
+          <span className={isMenuOpen ? "open" : ""}></span>
+        </button>
+
         <div className="logo-container" onClick={() => handleScroll("home", "/")}>
-          <img src="/log3.png"  className="logo" />
-         
+          <img src="/log3.png" className="logo" alt="Logo" />
         </div>
         
-        <nav>
+        <nav className={isMenuOpen ? "nav-open" : ""}>
           <button onClick={() => handleScroll("home", "/")}>Home</button>
           <button onClick={() => handleScroll("about-us", "/about-us")}>About Us</button>
           <button onClick={() => handleScroll("services", "/services")}>Services</button>
