@@ -1,19 +1,20 @@
 import React from "react";
-import homeVideo from "../assets/home3.mp4"; // Replace with your video file
+import homeVideo from "../assets/home3.mp4";
 import MetaTags from "../components/MetaTags";
 import "./home.css";
 
 const Home = () => {
   return (
     <>
-      {/* SEO for Home Page */}
+      {/* ✅ SEO Meta Tags */}
       <MetaTags
-        title="Home | Abhi Cleaning Services UAE"
-        description="Abhi Cleaning Services offers professional sewage, gutter, drain-line, and water tank cleaning across Dubai, Abu Dhabi, Sharjah & Ajman."
-        url="https://mycleaningcompany.com/"
+        title="Home | Abhi Drain Line Cleaning Services UAE"
+        description="Expert drain, sewage, and water tank cleaning services in Dubai, Abu Dhabi, Sharjah & Ajman. 24/7 professional service with eco-friendly methods."
+        keywords="Abhi Drain Line Cleaning Services, drain cleaning Dubai, sewage cleaning UAE, water tank cleaning Abu Dhabi, gutter cleaning Sharjah"
+        url="https://abhidrainlinecleaning.com/"
       />
 
-      {/* Home Section */}
+      {/* ✅ Home Section */}
       <section id="home" className="home-section">
         {/* Background Video */}
         <video
@@ -31,14 +32,12 @@ const Home = () => {
         {/* Text Content */}
         <div className="home-content">
           <h1>
-            Welcome to <strong>Abhi Cleaning Services</strong>
+            Welcome to <strong>Abhi Drain Line Cleaning Services</strong>
           </h1>
           <p>
-            Your trusted cleaning partner across the UAE, offering hygienic and
-            affordable solutions 24/7.
+            Reliable & affordable <strong>drain, sewage, and water tank cleaning</strong> services across the UAE.
           </p>
 
-          {/* Call & WhatsApp Buttons */}
           <div className="home-buttons">
             <a href="tel:+971556108355" className="call-btn">
               Call Now

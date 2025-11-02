@@ -1,6 +1,6 @@
 /* Testimonials Section */
 .testimonials-section {
-  background: #ffffff;
+  background: #f4f4f5;
   padding: 80px 20px;
   text-align: center;
   font-family: "Arial", sans-serif;
@@ -17,15 +17,15 @@
 .testimonials-container {
   display: flex;
   justify-content: center;
-  gap: 35px;
+  gap: 30px;
   flex-wrap: wrap;
 }
 
 /* Testimonial Card */
 .testimonial-card {
-  background:#f3f4f6;
+  background: #fff;
   border-radius: 16px;
-  box-shadow: 0 10px 24px rgba(1, 1, 1, 0.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   padding: 25px 20px;
   width: 320px;
   text-align: left;
@@ -33,7 +33,7 @@
 }
 
 .testimonial-card:hover {
-  transform: scale(1.07);
+  transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
@@ -48,7 +48,7 @@
 .profile-circle {
   width: 50px;
   height: 50px;
-  background: linear-gradient(to right, #1D2F54, #4d5c7b);
+  background: linear-gradient(135deg, #2563eb, #60a5fa);
   color: #fff;
   font-weight: 700;
   font-size: 20px;
@@ -61,7 +61,7 @@
 .profile-info h3 {
   margin: 0;
   font-size: 1.1rem;
-  color: #1D2F54;
+  color: #1e1e1e;
 }
 
 /* Stars */
@@ -73,7 +73,7 @@
 
 /* Service Name */
 .service-name {
-  color: #425477;
+  color: #2563eb;
   font-size: 1rem;
   margin-bottom: 10px;
   font-weight: 600;
