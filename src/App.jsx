@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { scroller } from "react-scroll";
-import Blogs from "./pages/Blogs";
+
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import MetaTags from "./components/MetaTags";
@@ -44,7 +44,7 @@ export default function App() {
         <About />
         <Services />
         <Testimonials />
-        <Blogs />
+      
         <Contact />
 
         {/* SEO/meta routes */}
