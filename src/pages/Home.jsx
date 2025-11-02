@@ -9,7 +9,7 @@ const Home = () => {
       {/* ✅ SEO Meta Tags */}
       <MetaTags
         title="Home | Abhi Drain Line Cleaning Services UAE"
-        description="Expert drain, sewage, and water tank cleaning services in Dubai, Abu Dhabi, Sharjah & Ajman. 24/7 professional service with eco-friendly methods."
+        description="Expert drain, sewage, gutter, pipeline cleaning services in Dubai, Abu Dhabi, Sharjah & Ajman. 24/7 professional service with eco-friendly methods."
         keywords="Abhi Drain Line Cleaning Services, drain cleaning Dubai, sewage cleaning UAE, water tank cleaning Abu Dhabi, gutter cleaning Sharjah"
         url="https://abhidrainlinecleaning.com/"
       />
@@ -35,7 +35,7 @@ const Home = () => {
             Welcome to <strong>Abhi Drain Line Cleaning Services</strong>
           </h1>
           <p>
-            Reliable & affordable <strong>drain, sewage, and water tank cleaning</strong> services across the UAE.
+            Reliable & affordable <strong>drain, sewage, gutter, pipeline cleaning</strong> services across the UAE.
           </p>
 
           <div className="home-buttons">
