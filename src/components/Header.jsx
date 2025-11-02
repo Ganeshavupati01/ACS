@@ -18,7 +18,7 @@ export default function Header() {
       <div className="header-content">
         {/* Logo goes here - replace the src with your actual logo path */}
         <div className="logo-container" onClick={() => handleScroll("home", "/")}>
-          <img src="./src/assets/log3.png" alt="Abhi Cleaning Services Logo" className="logo" />
+          <img src="/log3.png"  className="logo" />
          
         </div>
         
