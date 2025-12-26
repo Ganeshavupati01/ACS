@@ -11,6 +11,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
+import Blogs from "./pages/Blogs";
 import "./App.css";
 
 // ✅ Scroll to specific section on route change
@@ -124,6 +125,7 @@ export default function App() {
               />
             }
           />
+          <Route path="/blogs" element={<Blogs />} />
         </Routes>
 
         <Footer />
