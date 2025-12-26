@@ -1,12 +1,12 @@
 export default function Blogs() {
   return (
-    <div style={{ height: "100vh", width: "200%" }}>
-      <h2>hiiii</h2>
+    <div style={{ height: "100vh", width: "100%" }}>
+     
       <iframe
         src="https://blog-ssr-phi.vercel.app/blogs"
         title="Blogs"
         style={{
-          width: "200%",
+          width: "100%",
           height: "100%",
           border: "none",
         }}
