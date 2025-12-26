@@ -1,13 +1,15 @@
-import React from 'react'
-import "./blogs.css";
-const Blogs = () => {
+export default function Blogs() {
   return (
-    <section id="blogs" className="page blogs">
-    <div>
-    <h2>Blogs</h2>    
+    <div style={{ height: "100vh", width: "100%" }}>
+      <iframe
+        src="https://blog-ssr-phi.vercel.app/blogs"
+        title="Blogs"
+        style={{
+          width: "100%",
+          height: "100%",
+          border: "none",
+        }}
+      />
     </div>
-    </section>
-  )
+  );
 }
-
-export default Blogs
