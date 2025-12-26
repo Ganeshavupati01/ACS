@@ -13,7 +13,7 @@ export default function Header() {
       duration: 800,
       offset: -70,
     });
-    setIsMenuOpen(false); // Close menu after navigation
+    setIsMenuOpen(false);
   };
 
   const toggleMenu = () => {
@@ -23,8 +23,8 @@ export default function Header() {
   return (
     <header className="header">
       <div className="header-content">
-        <button 
-          className="hamburger" 
+        <button
+          className="hamburger"
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
@@ -36,12 +36,15 @@ export default function Header() {
         <div className="logo-container" onClick={() => handleScroll("home", "/")}>
           <img src="/log3.png" className="logo" alt="Logo" />
         </div>
-        
+
         <nav className={isMenuOpen ? "nav-open" : ""}>
           <button onClick={() => handleScroll("home", "/")}>Home</button>
           <button onClick={() => handleScroll("about-us", "/about-us")}>About Us</button>
           <button onClick={() => handleScroll("services", "/services")}>Services</button>
-          <button onClick={() => handleScroll("blogs", "/blogs")}>Blogs</button>
+
+          {/* BLOGS */}
+          <button onClick={() => navigate("/blogs")}>Blogs</button>
+
           <button onClick={() => handleScroll("contact", "/contact")}>Contact</button>
         </nav>
       </div>
