@@ -1,6 +1,6 @@
 export default function Blogs() {
   return (
-    <div style={{ height: "100vh", width: "100%" }}>
+    <div style={{ height: "100vh", width: "100vw" }}>
      
       <iframe
         src="https://blog-ssr-phi.vercel.app/blogs"
