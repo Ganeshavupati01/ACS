@@ -67,7 +67,18 @@ export default function App() {
               </>
             }
           />
-
+          <Route
+            path="/services"
+            element={
+              <>
+                <Home />
+                <About />
+                <Services />
+                <Testimonials />
+                <Contact />
+              </>
+            }
+          />
           <Route
             path="/about-us"
             element={
