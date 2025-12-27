@@ -26,21 +26,23 @@ function ScrollToSection() {
   const location = useLocation();
 
   useEffect(() => {
-    if (location.pathname === "/blogs") return; // 🚫 disable for blogs
+    if (location.pathname.startsWith("/blogs")) return;
 
     const section = location.pathname.replace("/", "") || "home";
 
-    setTimeout(() => {
-      scroller.scrollTo(section, {
-        smooth: true,
-        duration: 800,
-        offset: -70,
-      });
-    }, 50);
+    const el = document.getElementById(section);
+    if (!el) return;
+
+    scroller.scrollTo(section, {
+      smooth: true,
+      duration: 800,
+      offset: -70,
+    });
   }, [location]);
 
   return null;
 }
+
 
 export default function App() {
   return (
@@ -106,6 +108,7 @@ export default function App() {
           />
 
           {/* ✅ BLOGS – FULL PAGE */}
+          <Route path="/blogs/*" element={null} />
           
         </Routes>
 
