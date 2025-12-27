@@ -11,8 +11,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 25px;
-  max-width: 1200px;
-  margin: auto;
+  width: 100%;
 }
 
 /* ✅ Footer Section */

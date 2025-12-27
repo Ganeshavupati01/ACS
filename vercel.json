@@ -1,10 +1,6 @@
 {
   "rewrites": [
     {
-      "source": "/blogs",
-      "destination": "https://blog-ssr-phi.vercel.app/blogs"
-    },
-    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
