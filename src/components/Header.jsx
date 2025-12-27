@@ -42,8 +42,8 @@ export default function Header() {
           <button onClick={() => handleScroll("about-us", "/about-us")}>About Us</button>
           <button onClick={() => handleScroll("services", "/services")}>Services</button>
 
-          {/* BLOGS */}
           <button onClick={() => navigate("/blogs")}>Blogs</button>
+
 
           <button onClick={() => handleScroll("contact", "/contact")}>Contact</button>
         </nav>

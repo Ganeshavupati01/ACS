@@ -106,7 +106,7 @@ export default function App() {
           />
 
           {/* ✅ BLOGS – FULL PAGE */}
-          <Route path="/blogs" element={<Blogs />} />
+          
         </Routes>
 
         <Footer />
