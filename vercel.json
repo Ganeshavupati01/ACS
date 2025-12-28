@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/blogs",
-      "destination": "https://blog-ssr-phi.vercel.app/"
+      "destination": "https://blog-ssr-phi.vercel.app"
     },
     {
       "source": "/blogs/:path*",
