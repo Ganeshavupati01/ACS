@@ -1,14 +1,16 @@
 {
   "rewrites": [
     {
-      "source": "/blogs/:path*",
-      "destination": "https://blog-ssr-phi.vercel.app/blogs/:path*"
-    }
-  ],
-  "routes": [
+      "source": "/blogs",
+      "destination": "https://blog-ssr-phi.vercel.app/"
+    },
     {
-      "src": "/blogs/.*",
-      "dest": "https://blog-ssr-phi.vercel.app/blogs/$1"
+      "source": "/blogs/:path*",
+      "destination": "https://blog-ssr-phi.vercel.app/:path*"
+    },
+    {
+      "source": "/((?!blogs).*)",
+      "destination": "/index.html"
     }
   ]
 }
