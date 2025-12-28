@@ -3,10 +3,12 @@
     {
       "source": "/blogs/:path*",
       "destination": "https://blog-ssr-phi.vercel.app/blogs/:path*"
-    },
+    }
+  ],
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "src": "/blogs/.*",
+      "dest": "https://blog-ssr-phi.vercel.app/blogs/$1"
     }
   ]
 }
