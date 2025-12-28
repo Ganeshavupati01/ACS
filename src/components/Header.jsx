@@ -42,9 +42,24 @@ export default function Header() {
           <button onClick={() => handleScroll("about-us", "/about-us")}>About Us</button>
           <button onClick={() => handleScroll("services", "/services")}>Services</button>
           
-        
-          <a href="/blogs" className="nav-link-button">
-            bbbbbb
+          {/* ✅ Use regular <a> tag for external blog */}
+          <a 
+            href="/blogs" 
+            onClick={(e) => {
+              setIsMenuOpen(false);
+            }}
+            style={{
+              background: 'none',
+              border: 'none',
+              cursor: 'pointer',
+              font: 'inherit',
+              color: 'inherit',
+              textDecoration: 'none',
+              display: 'inline-block',
+              padding: 0
+            }}
+          >
+            Blogs
           </a>
 
           <button onClick={() => handleScroll("contact", "/contact")}>Contact</button>
