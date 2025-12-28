@@ -84,9 +84,11 @@ body {
 .header nav {
   display: flex;
   gap: 20px;
+  align-items: center;
 }
 
-.header button {
+.header button,
+.header nav a {
   background: none;
   border: none;
   font-size: 16px;
@@ -95,14 +97,20 @@ body {
   position: relative;
   transition: all 0.3s ease;
   outline: none;
+   
+
 }
 
+
 .header button:hover,
-.header button:focus {
+.header button:focus,
+.header nav a:hover,
+.header nav a:focus {
   transform: scale(1.1);
 }
 
-.header button::after {
+.header button::after,
+.header nav a::after {
   content: "";
   position: absolute;
   width: 0;
@@ -114,11 +122,14 @@ body {
 }
 
 .header button:hover::after,
-.header button:focus::after {
+.header button:focus::after,
+.header nav a:hover::after,
+.header nav a:focus::after {
   width: 100%;
 }
 
-.header button:active {
+.header button:active,
+.header nav a:active {
   transform: scale(1.05);
 }
 
@@ -156,18 +167,21 @@ body {
     left: 0;
   }
 
-  .header nav button {
+  .header nav button,
+  .header nav a {
     font-size: 20px;
     width: 100%;
     text-align: left;
     padding: 10px 0;
   }
 
-  .header nav button::after {
+  .header nav button::after,
+  .header nav a::after {
     display: none;
   }
 
-  .header nav button:hover {
+  .header nav button:hover,
+  .header nav a:hover {
     transform: translateX(10px);
   }
 }

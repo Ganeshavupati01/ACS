@@ -48,16 +48,7 @@ export default function Header() {
             onClick={(e) => {
               setIsMenuOpen(false);
             }}
-            style={{
-              background: 'none',
-              border: 'none',
-              cursor: 'pointer',
-              font: 'inherit',
-              color: 'inherit',
-              textDecoration: 'none',
-              display: 'inline-block',
-              padding: 0
-            }}
+            
           >
             Blogs
           </a>
