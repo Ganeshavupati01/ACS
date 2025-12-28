@@ -9,7 +9,14 @@ export default defineConfig({
       '/api/blogs': {
         target: 'https://blog-ssr-phi.vercel.app',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api\/blogs/, '/blogs'),
+        rewrite: (path) => {
+          const url = new URL(`http://localhost${path}`);
+          const targetUrl = url.searchParams.get('url');
+          if (targetUrl) {
+            return targetUrl.replace('https://blog-ssr-phi.vercel.app', '');
+          }
+          return '/blogs';
+        },
       },
     },
   },

@@ -1,11 +1,14 @@
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import './blogs.css';
 
 export default function Blogs() {
   const [html, setHtml] = useState('');
+  const { slug } = useParams();
 
   useEffect(() => {
-    fetch('/api/blogs')
+    const url = slug ? `https://blog-ssr-phi.vercel.app/blogs/${slug}` : 'https://blog-ssr-phi.vercel.app/blogs';
+    fetch(`/api/blogs?url=${encodeURIComponent(url)}`)
       .then(response => response.text())
       .then(data => {
         const parser = new DOMParser();
@@ -17,7 +20,7 @@ export default function Blogs() {
         setHtml(bodyContent);
       })
       .catch(error => console.error('Error fetching blogs:', error));
-  }, []);
+  }, [slug]);
 
   return (
     <div className="blogs" style={{ paddingTop: '70px' }}>

@@ -175,7 +175,7 @@ function AppContent() {
           />
 
           {/* Blogs Page */}
-          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blogs/:slug?" element={<Blogs />} />
           
         </Routes>
           </>
