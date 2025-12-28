@@ -20,9 +20,16 @@ function ScrollToSection() {
   const location = useLocation();
 
   useEffect(() => {
-    if (location.pathname === "/blogs") return;
+    if (location.pathname.startsWith("/blogs")) return;
 
-    const section = location.pathname.replace("/", "") || "home";
+    const path = location.pathname;
+    let section = "home";
+    if (path === "/") section = "home";
+    else if (path.startsWith("/services")) section = "services";
+    else if (path === "/about-us") section = "about-us";
+    else if (path === "/contact") section = "contact";
+    else section = path.replace("/", "");
+
     setTimeout(() => {
       scroller.scrollTo(section, {
         smooth: true,
@@ -122,6 +129,19 @@ function AppContent() {
           />
 
           {/* Service Pages */}
+          <Route
+            path="/services"
+            element={
+              <MetaTags
+                title="Sewage & Drain Cleaning Services | 700 Cleaning UAE"
+                description="Explore our professional sewage, drain, and tank cleaning services across UAE. Fast, reliable, and affordable solutions."
+                keywords="sewage tank cleaning UAE, drain line cleaning, oil tank cleaning, pipeline cleaning services"
+                url="https://700sewagecleaningservices.com/services"
+                image="https://700sewagecleaningservices.com/images/services.jpg"
+                type="article"
+              />
+            }
+          />
           <Route
             path="/services/:serviceName"
             element={
