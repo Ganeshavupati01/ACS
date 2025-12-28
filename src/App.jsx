@@ -130,9 +130,7 @@ export default function App() {
             }
           />
 
-          {/* ================= BLOGS (REVERSE PROXY) ================= */}
-          {/* Dummy route ONLY to silence router warnings */}
-          <Route path="/blogs/*" element={null} />
+        
         </Routes>
 
         <Footer />

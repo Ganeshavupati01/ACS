@@ -42,13 +42,10 @@ export default function Header() {
           <button onClick={() => handleScroll("about-us", "/about-us")}>About Us</button>
           <button onClick={() => handleScroll("services", "/services")}>Services</button>
           
-          <button
-  onClick={() => {
-    window.location.href = "/blogs";
-  }}
->
-  Blogs
-</button>
+          {/* Use regular anchor tag for external blog */}
+          <a href="/blogs" className="nav-link-button">
+            Blogs
+          </a>
 
           <button onClick={() => handleScroll("contact", "/contact")}>Contact</button>
         </nav>
