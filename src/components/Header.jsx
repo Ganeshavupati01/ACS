@@ -41,17 +41,14 @@ export default function Header() {
           <button onClick={() => handleScroll("home", "/")}>Home</button>
           <button onClick={() => handleScroll("about-us", "/about-us")}>About Us</button>
           <button onClick={() => handleScroll("services", "/services")}>Services</button>
-
+          
           <button
-  type="button"
   onClick={() => {
     window.location.href = "/blogs";
   }}
 >
   Blogs
 </button>
-
-
 
           <button onClick={() => handleScroll("contact", "/contact")}>Contact</button>
         </nav>
