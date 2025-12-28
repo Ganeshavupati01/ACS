@@ -20,7 +20,7 @@ export default function Blogs() {
   }, []);
 
   return (
-    <div className="blogs" style={{ paddingTop: '70px' }}> {/* Adjust for header height */}
+    <div className="blogs" style={{ paddingTop: '70px' }}>
       <div style={{ width: '100%' }} dangerouslySetInnerHTML={{ __html: html }} />
     </div>
   );

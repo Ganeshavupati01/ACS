@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://700sewagecleaningservices.com/sitemap.xml
