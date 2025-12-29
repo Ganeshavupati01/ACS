@@ -96,9 +96,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/blogs" aria-label="Read cleaning and maintenance blogs">
-                  Blogs
-                </Link>
+                <a href="/blogs" aria-label="Read cleaning and maintenance blogs">Blogs</a>
               </li>
               <li>
                 <Link to="/contact" aria-label="Contact Abhi Drain Line Cleaning Services">
