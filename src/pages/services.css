@@ -265,7 +265,7 @@
 @media (max-width: 1024px) {
   .modal-card {
     flex-direction: column;
-    height: 65%;
+    height: 70%;
   }
   .modal-left img {
     height: 250px;
