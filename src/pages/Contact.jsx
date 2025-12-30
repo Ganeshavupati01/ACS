@@ -36,8 +36,8 @@ const Contact = () => {
                 <FaEnvelope className="icon" />
                 <div>
                   <p>Email</p>
-                  <a href="mailto:contact@abhidrainlinecleaning.com">
-                    contact@abhidrainlinecleaning.com
+                  <a href="mailto:abhidrainlinecleaningservices@gmail.com">
+                    abhidrainlinecleaningservices@gmail.com
                   </a>
                 </div>
               </div>
@@ -46,7 +46,7 @@ const Contact = () => {
                 <FaMapMarkerAlt className="icon" />
                 <div>
                   <p>Find Us</p>
-                  <span>123 Cleaning Street, Dubai, UAE</span>
+                  <span>Dubai, UAE</span>
                 </div>
               </div>
 

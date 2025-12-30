@@ -14,45 +14,134 @@ const servicesData = [
     slug: "sewage-cleaning",
     desc: "Professional sewage cleaning for a hygienic environment.",
     img: sImg,
-    details:
-      "We offer modern sewage cleaning with advanced equipment, odor removal, and safe waste disposal to maintain hygiene in your space.",
+    details: `
+      Our <strong>Sewage Cleaning Services in UAE</strong> deliver <strong>professional sewage cleaning</strong>,
+      <strong>emergency sewage removal</strong>, and <strong>preventive sewage maintenance services in UAE</strong>
+      for <strong>residential, commercial, and industrial properties</strong>.
+      Using <strong>advanced vacuum suction trucks</strong>,
+      <strong>high-pressure water jetting</strong>, and
+      <strong>eco-compliant waste disposal systems</strong>,
+      we ensure <strong>complete sewage blockage removal</strong>,
+      <strong>sludge extraction</strong>, and
+      <strong>pipeline sanitization</strong> while strictly following
+      <strong>UAE municipality regulations</strong>.
+
+      As a trusted provider of <strong>sewage cleaning services in UAE</strong>,
+      our expert team specializes in
+      <strong>sewer line cleaning</strong>,
+      <strong>sewage tank cleaning</strong>,
+      <strong>drainage system maintenance</strong>, and
+      <strong>wastewater management services in UAE</strong>,
+      helping prevent <strong>sewage overflows</strong>,
+      <strong>foul odors</strong>, and
+      <strong>health hazards</strong>.
+
+      Our reliable <strong>Sewage Cleaning Services in UAE</strong> improve
+      <strong>drainage efficiency</strong>,
+      <strong>extend pipeline lifespan</strong>,
+      reduce <strong>costly emergency repairs</strong>,
+      and support <strong>sustainable hygiene solutions</strong>—making us a
+      <strong>preferred provider of high-quality services in UAE</strong>
+      focused on <strong>safety</strong>, <strong>compliance</strong>, and
+      <strong>long-term performance</strong>.
+    `,
     faqs: [
       { q: "How often should sewage cleaning be done?", a: "At least once every 6 months to prevent clogging." },
       { q: "Do you handle both residential and commercial?", a: "Yes, we handle both efficiently." },
       { q: "Is the process eco-friendly?", a: "Absolutely, we use biodegradable agents." },
     ],
   },
+
   {
     title: "Pipeline Cleaning",
     slug: "pipeline-cleaning",
     desc: "High-pressure cleaning to remove rust and residue.",
     img: waterTankImg,
-    details:
-      "Our pipeline cleaning ensures smooth water flow using high-pressure jetting and safe, non-toxic solutions.",
+    details: `
+      Our <strong>Pipeline Cleaning Services in UAE</strong> provide reliable solutions for
+      clearing blockages and maintaining <strong>smooth pipeline flow</strong> for
+      <strong>residential, commercial, and industrial properties</strong>.
+      Using <strong>high-pressure water jetting</strong>,
+      <strong>mechanical cleaning tools</strong>, and
+      <strong>CCTV pipeline inspection</strong>,
+      we effectively remove <strong>grease buildup</strong>,
+      <strong>debris</strong>, and
+      <strong>internal obstructions</strong> while ensuring full compliance with
+      <strong>UAE municipality regulations</strong>.
+
+      As a trusted provider of <strong>pipeline maintenance services in UAE</strong>,
+      we handle <strong>emergency pipeline cleaning</strong>,
+      <strong>drainage pipeline cleaning</strong>, and
+      <strong>underground pipeline maintenance</strong> to prevent
+      <strong>leaks</strong>, <strong>backups</strong>, and
+      <strong>system failures</strong>.
+      Our <strong>eco-friendly approach</strong> improves
+      <strong>pipeline efficiency</strong>,
+      extends <strong>pipe lifespan</strong>, and reduces
+      <strong>costly repairs</strong>.
+    `,
     faqs: [
       { q: "Do you clean underground pipelines?", a: "Yes, including overhead ones." },
       { q: "Will water supply be affected?", a: "Only temporarily during cleaning." },
     ],
   },
+
   {
     title: "Gutter Cleaning",
     slug: "gutter-cleaning",
     desc: "Prevent damage with our complete gutter cleaning.",
     img: gutterImg,
-    details:
-      "We remove leaves, debris, and sludge ensuring smooth drainage and preventing water overflow or roof damage.",
+    details: `
+      Our <strong>Gutter Cleaning Services in UAE</strong> ensure
+      <strong>efficient rainwater flow</strong> and protect buildings from
+      <strong>water damage</strong>, <strong>leaks</strong>, and
+      <strong>structural deterioration</strong>.
+      Our <strong>professional, well-trained staff</strong> use
+      <strong>specialized tools</strong> and <strong>safe access techniques</strong>
+      to remove <strong>leaves</strong>, <strong>sludge</strong>,
+      <strong>sand buildup</strong>, and <strong>debris</strong> from
+      <strong>residential, commercial, and industrial gutters</strong>.
+
+      We provide <strong>manual and high-reach gutter cleaning</strong>,
+      <strong>downpipe flushing</strong>, and
+      <strong>blockage inspection</strong> while strictly following
+      <strong>UAE safety and municipality standards</strong>.
+      Our services help prevent <strong>overflowing gutters</strong>,
+      <strong>roof dampness</strong>, <strong>pest breeding</strong>, and
+      <strong>drainage failures</strong>, ensuring
+      <strong>long-lasting gutter performance</strong>.
+    `,
     faqs: [
       { q: "How frequently should gutters be cleaned?", a: "Twice a year, ideally before and after monsoon." },
       { q: "Do you repair damaged gutters?", a: "Yes, minor repairs are included." },
     ],
   },
+
   {
     title: "Drain-line Cleaning",
     slug: "drain-line-cleaning",
     desc: "Restore plumbing efficiency with our drain cleaning.",
     img: drainImg,
-    details:
-      "We remove grease, soap scum, and mineral buildup using hydro-jet methods, ensuring full drain efficiency.",
+    details: `
+      Our <strong>Drain Line Cleaning Services in UAE</strong> deliver reliable solutions for
+      clearing <strong>blocked</strong> and <strong>slow-flowing drains</strong> across
+      <strong>residential, commercial, and industrial properties</strong>.
+      We provide <strong>professional drain line cleaning</strong>,
+      <strong>emergency drain blockage removal</strong>, and
+      <strong>routine drain maintenance services in UAE</strong> using
+      <strong>high-pressure water jetting</strong>,
+      <strong>mechanical drain rodding</strong>, and
+      <strong>CCTV drain line inspection</strong>.
+
+      Our expert team removes <strong>grease</strong>,
+      <strong>sludge</strong>, <strong>scale buildup</strong>, and
+      <strong>debris</strong> while ensuring full compliance with
+      <strong>UAE municipality and safety regulations</strong>.
+      Our services improve <strong>drainage efficiency</strong>,
+      <strong>extend pipe lifespan</strong>, and prevent
+      <strong>costly repairs</strong>, making us a trusted choice for
+      <strong>high-quality drain cleaning solutions in UAE</strong>.
+    `,
     faqs: [
       { q: "Is drain cleaning messy?", a: "No, our process keeps the surroundings clean." },
       { q: "Can you fix recurring clogs?", a: "Yes, we identify root causes for long-term results." },
@@ -139,7 +228,10 @@ export default function Services() {
 
               <div className="tab-content">
                 {tab === "details" ? (
-                  <p className="details-text">{selectedService.details}</p>
+<div
+  className="service-details"
+  dangerouslySetInnerHTML={{ __html: selectedService.details }}
+/>
                 ) : (
                   <ul className="faq-list">
                     {selectedService.faqs.map((faq, i) => (

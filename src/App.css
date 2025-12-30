@@ -87,6 +87,7 @@ body {
   align-items: center;
 }
 
+
 .header button,
 .header nav a {
   background: none;
@@ -109,6 +110,8 @@ body {
   transform: scale(1.1);
 }
 
+
+
 .header button::after,
 .header nav a::after {
   content: "";
@@ -120,6 +123,7 @@ body {
   background-color: white;
   transition: width 0.3s ease;
 }
+
 
 .header button:hover::after,
 .header button:focus::after,

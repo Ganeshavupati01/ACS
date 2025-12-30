@@ -150,6 +150,7 @@ const Footer = () => {
         {/* ✅ Copyright */}
         <div className="copyright">
           &copy; {new Date().getFullYear()} Abhi Drain Line Cleaning Services UAE. All Rights Reserved.
+        <div>Developed By Renuka and Ganesh</div>
         </div>
       </footer>
     </>
