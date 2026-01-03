@@ -1,33 +1,55 @@
-import { useNavigate } from "react-router-dom";
-import { scroller } from "react-scroll";
+import { useNavigate, useLocation } from "react-router-dom";
 
 export default function Header() {
   const navigate = useNavigate();
+  const location = useLocation();
 
-  const handleScroll = (section, path) => {
-    navigate(path); // change URL
-    scroller.scrollTo(section, {
-      smooth: true,
-      duration: 800,
-      offset: -70,
-    });
+  const handleNavigate = (path) => {
+    if (location.pathname !== path) {
+      navigate(path);
+    }
   };
+
+//   const goToBlogs = () => {
+//   if (import.meta.env.DEV) {
+//     // local development
+//     window.location.href = "https://blog-ssr-phi.vercel.app/blogs";
+//   } else {
+//     // production (Vercel rewrite will handle)
+//     navigate("/blogs");
+//   }
+// };
+
+
+  // 🔥 Redirect to Next.js SSR blog
+   
 
   return (
     <header className="header">
       <div className="header-content">
-        {/* Logo goes here - replace the src with your actual logo path */}
-        <div className="logo-container" onClick={() => handleScroll("home", "/")}>
-          <img src="./src/assets/log3.png" alt="Abhi Cleaning Services Logo" className="logo" />
-         
+        <div
+          className="logo-container"
+          onClick={() => handleNavigate("/")}
+        >
+          <img
+            src="./src/assets/log3.png"
+            alt="Abhi Cleaning Services Logo"
+            className="logo"
+          />
         </div>
-        
+
         <nav>
-          <button onClick={() => handleScroll("home", "/")}>Home</button>
-          <button onClick={() => handleScroll("about-us", "/about-us")}>About Us</button>
-          <button onClick={() => handleScroll("services", "/services")}>Services</button>
-          <button onClick={() => handleScroll("blogs", "/blogs")}>Blogs</button>
-          <button onClick={() => handleScroll("contact", "/contact")}>Contact</button>
+          <button onClick={() => handleNavigate("/")}>Home</button>
+          <button onClick={() => handleNavigate("/about-us")}>About Us</button>
+          <button onClick={() => handleNavigate("/services")}>Services</button>
+
+          {/* ✅ Blogs → SSR Next.js app */}
+          <button onClick={() => handleNavigate("/blogs")}>Blogs</button>
+          
+           {/* <button onClick={goToBlogs}>Blogs</button> */}
+
+
+          <button onClick={() => handleNavigate("/contact")}>Contact</button>
         </nav>
       </div>
     </header>

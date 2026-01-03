@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    {
+      "source": "/blogs",
+      "destination": "https://blog-ssr-phi.vercel.app/blogs"
+    },
+    {
+      "source": "/blogs/:path*",
+      "destination": "https://blog-ssr-phi.vercel.app/blogs/:path*"
+    },
+    {
+      "source": "/sitemap.xml",
+      "destination": "https://blog-ssr-phi.vercel.app/sitemap.xml"
+    }
+  ]
+}
