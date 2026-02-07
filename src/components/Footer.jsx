@@ -21,10 +21,10 @@ const Footer = () => {
     <>
       {/* ✅ SEO Section */}
       <Helmet>
-        <title>Abhi Drain Line Cleaning Services UAE | Professional Drain & Sewage Cleaning</title>
+        <title>Abhi Drain Line Cleaning Services | Professional Drain & Sewage Cleaning</title>
         <meta
           name="description"
-          content="Abhi Drain Line Cleaning Services UAE offers professional drain, sewage, and water tank cleaning across Dubai, Abu Dhabi, Sharjah, and Ajman. Reliable and eco-friendly solutions for residential, commercial, and industrial cleaning."
+          content="Abhi Drain Line Cleaning Services offers professional drain, sewage, and water tank cleaning across Dubai, Abu Dhabi, Sharjah, and Ajman. Reliable and eco-friendly solutions for residential, commercial, and industrial cleaning."
         />
         <meta
           name="keywords"
