@@ -56,14 +56,15 @@ export default function App() {
         <ScrollToSection />
 
         <Routes>
-          {/* ================= HOME (ONE PAGE) ================= */}
+          {/* ================= HOME ================= */}
           <Route
             path="/"
             element={
               <>
                 <MetaTags
-                  title="700 Sewage Cleaning Services UAE | Professional Drainage & Tank Cleaning"
-                  description="700 Sewage Cleaning Services offers expert sewage, drainage, and water tank cleaning across UAE."
+                  title="Abhi Drain Line Cleaning | Professional Drainage Services in Dubai & Sharjah"
+                  description="Abhi Drain Line Cleaning provides professional drain, sewage, and water tank cleaning services in Dubai and Sharjah."
+                  url="https://www.abhidrainlinecleaning.com/"
                 />
                 <Home />
                 <About />
@@ -74,7 +75,7 @@ export default function App() {
             }
           />
 
-          {/* ================= SERVICES (OLD CODE BEHAVIOR) ================= */}
+          {/* ================= SERVICES ================= */}
           <Route
             path="/services"
             element={
@@ -88,7 +89,6 @@ export default function App() {
             }
           />
 
-          {/* Services details view (same page, scrolls to services) */}
           <Route
             path="/services/:serviceName"
             element={
@@ -129,8 +129,6 @@ export default function App() {
               </>
             }
           />
-
-        
         </Routes>
 
         <Footer />
